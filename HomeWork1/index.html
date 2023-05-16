@@ -6,33 +6,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-        <div class="title">
-            <p>Фильтр товаров</p>
-        </div>
-        <div class="row">
-            <label for="userPrice">Введите цену товара:</label>
-            <select name="selectComparisons" id="userComparisons">
-                <option value="greaterThanOrEqualTo">&#8805;</option>
-                <option value="lessThanOrEqualTo">&#8804;</option>
-                <option value="more">&gt;</option>
-                <option value="less">&lt;</option>
-                <option value="equally">=</option>
-            </select>
-            <input type="number" id="userPrice" name="inputUserPrice" placeholder="Введите цену товара">      
-        </div>
-        <div class="row">
-            <label for="userSupplier">Выберите поставщика товара:</label>
-            <select name="selectSupplier" id="userSupplier">
-                <option value="supplierChooise1">НЕВСКАЯ КОСМЕТИКА АО</option>
-                <option value="supplierChooise2">CORAL E.G.</option>
-                <option value="supplierChooise3">БОБРУЙСКИЙ БРОВАР ЗАО</option>
-            </select>
-        </div>
-        <div class="row">
-            <input type="submit" id="submitBtn" value="Получить данные">
-        </div>
-        
-    </form>
+ <form>
+  <ul class="wrapper">
+    <li class="form-row">
+      <label for="beginPrice">Цена. От</label>
+      <input type="number" id="beginPrice" name="userBeginPrice">
+      
+      <label for="endPrice">До</label>
+      <input type="number" id="endPrice" name="userEndPrice">
+    </li>
+    <li class="form-row">
+      <label for="townborn">Название товара</label>
+      <input type="text" id="townborn">
+    </li>
+    <li class="form-row">
+      <button type="submit">Отправить</button>
+    </li>
+  </ul>
+</form>
+
 </body>
 </html>
