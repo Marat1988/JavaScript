@@ -4,145 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OwlCarousel</title>
+    <title>Owl carousel</title>
     <link rel="stylesheet" href="carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="carousel/dist/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-
-        body *{
-            box-sizing: border-box;
-        }
-        .owl-dot{
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: springgreen!important;
-            border: 1px solid #000!important;
-            outline: 0;
-        }
-
-        .owl-dot.active{
-            background-color: aquamarine!important;
-            border-color: rgb(1, 249, 55)!important;
-        }
-
-
-        .owl-item{
-            height: 200px;
-            border: 3px solid rgb(197, 72, 72);
-            border-radius: 15px;
-        }
-        .owl-dot + .owl-dot{
-            margin-left: 20px;
-        }
-
-        .container{
-            margin: 0 auto;
-            min-width: 1200px;
-            max-width: 1400px;
-            width: 100%;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="owl-carousel">
-            <a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a>.
-            <img class="owl-lazy" data-src="https://placehold.it/350x450&text=1">
-            <img class="owl-lazy" data-src="https://placehold.it/350x650&text=2">
-            <img class="owl-lazy" data-src="https://placehold.it/350x250&text=4">
-            <img class="owl-lazy" data-src="https://placehold.it/350x250&text=5">
-            <img class="owl-lazy" data-src="https://placehold.it/350x250&text=6">
-            <img class="owl-lazy" data-src="https://placehold.it/350x250&text=7">
-            <img class="owl-lazy" data-src="https://placehold.it/350x250&text=8">
-            <img class="owl-lazy" data-src="https://placehold.it/350x400&text=9">
-            <img class="owl-lazy" data-src="https://placehold.it/350x400&text=10">
-            <img class="owl-lazy" data-src="https://placehold.it/350x450&text=11">
-          </div>
+    <!-- carouser -->
+    <div class="owl-carousel owl-theme">
+        <a class="owl-video" href="https://youtu.be/LvPKP7OBySA?list=RDCMUCt36CWL85NGtOgUMZ2X6x5g"></a>
+        <a class="owl-video" href="https://youtu.be/hrwKUZ6LkCg?list=PLKP3l9fd3KUG5F_I8-i1Iin6HueZGQsqQ"></a>
+        <a class="owl-video" href="https://youtu.be/CTKBquykBIk?list=PLKP3l9fd3KUG5F_I8-i1Iin6HueZGQsqQ"></a>
+        <a class="owl-video" href="https://youtu.be/CN7FGwS7H_Y?list=PLKP3l9fd3KUG5F_I8-i1Iin6HueZGQsqQ"></a>
+        <a class="owl-video" href="https://youtu.be/bfHLFf0vrfU?list=PLhhjwMYxzoljeQx0MKPu9-IFgJy3wYRuh"></a>
+        <a class="owl-video" href="https://youtu.be/1HCMg45GHrI?list=PLhhjwMYxzoljeQx0MKPu9-IFgJy3wYRuh"></a>
+        <a class="owl-video" href="https://youtu.be/R4J014di8Vk?list=PLhhjwMYxzoljeQx0MKPu9-IFgJy3wYRuh"></a>
+        <a class="owl-video" href="https://youtu.be/A9pvcnV7hvo?list=PLhhjwMYxzoljeQx0MKPu9-IFgJy3wYRuh"></a>
+        <a class="owl-video" href="https://youtu.be/caYbObBDJyk?list=PLExjQhP_Jz8_y_c9iJxKkOQfdD7glOqfI"></a>
+        <a class="owl-video" href="https://youtu.be/oGxSDC-NAok?list=PLExjQhP_Jz8_y_c9iJxKkOQfdD7glOqfI"></a>
+        <a class="owl-video" href="https://youtu.be/9I99wEJrCK0?list=PLExjQhP_Jz8_y_c9iJxKkOQfdD7glOqfI"></a>
+        <a class="owl-video" href="https://youtu.be/U7xHcTrUgWo?list=PLExjQhP_Jz8_y_c9iJxKkOQfdD7glOqfI"></a>
     </div>
-
-    <button class="customNextBtn">NEXT</button>
-
-
+    <!-- My custom buttons -->
+    <div class="customButtons">
+        <button class="customPrevBtn">PREVIOUS</button>
+        <button class="customNextBtn">NEXT</button>
+    </div>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="carousel/dist/owl.carousel.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            var owl = $(".owl-carousel"); //итициализировали карусель
-            $(".owl-carousel").owlCarousel({
-                items: 1, //одновременно отображаемые элементы
-                //margin: 50, //отступ справа слайда
-                //loop: true, //зацикливание элементов (бесконечная прокрутка)
-                //center: true, //слайды по центру
-                //mouseDrag: false, //можно ли драгать мышкой
-                //touchDrag: false, //режим эмеляции мобильного устройства
-                //pullDrag: true,
-                //freeDrag: true //разрешение свободного перемешения слайдов
-                // stagePadding: 50, //Для видимости краев других слайдов при прокрутке
-                // merge: true, //для  занятия позиции слайда
-                // mergeFit: false
-                //autoWidth: true, //автоматическая ширина
-                //startPosition: 2, //Возможность задать начальный слайд
-                //URLhashListener: true //Слушать хэш страницы
-                nav: true //показывать или скрывать стрелки справа
-                //rewind: false //размешить или запретить перемотку
-                //navText: ['Prev','Next'],//вместо стандартных значков что-то другое 
-                //navElement: 'span'
-                //slideBy: 3
-                //slideTransition: 'ease-in-out' //анимация при перемотре
-                //dots: true, //показывать точки
-                //dotsEach: true, //количество точек, соответствующих количеству слайдов
-                //dotsData: true //для вставки значений в точки
-                //lazyLoad: true, //для подгрузки изображений динамически
-                //lazyLoadEager: 3, //для подгрузки одновременно картинок,
-                //autoplay: true, //слайды сами двигаются
-                //autoplayTimeout: 1000, //скорость автоматической прокрутки слайдов
-                //autoplayHoverPause: true, //если на слайд наводив курсов мыши, то автопрокрутка останавливается
-                //smartSpeed: 1000, //скорость перехода между слайдами
-                //autoplaySpeed: 100,//скорость, используемая при автопрокрутке
-                //navSpeed: 1000, //скорость переключения между слайдами при нажатии стрелок
-                //dotsSpeed: 1000, //скорость переключения между слайдами при нажатии точек
-                //dragEndSpeed: 10000, //скорость переключения между слайдами при драге
-                //callbacks: true //активирует возможность подвязывать на события колбэки
-                //onDragged: ()=>console.log('onDragged')
-                //responsive: true //при изменении ширины браузера слайдер адаптируется
-                //responsiveRefreshRate: 3000 //как скоро произойдет адаптация при изменении ширины экрана
-                // responsive: {
-                //     0:{ //от 0 до 600 px items равен 1, т.е. виден один слайд
-                //         items: 1
-                //     },
-                //     600: {
-                //         items: 3
-                //     },
-                //     1000: {
-                //         items: 5
-                //     }
-                // },
-                // respontiveBaseElement: '.container' //на какой элемент
-                //video:true, //разрешает видео 
-                //videoHeight: 100, //регулировка высоты видео
-                //videoWidth: 100 //регулировка ширины видео
-                //animateIn: 'animate__backInDown', //начало анимации
-                //animateOut: 'animate__backOutRigth' //конец анимации
-                //itemElement: 'ul',
-                //stageElement: 'li'
-
-            });
-
-            // owl.on('changed.owl.carousel', function(event){ //при возникновении собития
-            //     console.log(event);
-            // });
-
-            $('.customNextBtn').click(function(){ //кастомное событие
-                owl.trigger('next.owl.carousel');
-            })
-
-
-        });
-    </script>
+    <script src="javascript.js"></script>
 </body>
 </html>

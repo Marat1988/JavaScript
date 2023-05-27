@@ -1,0 +1,35 @@
+body *{
+    box-sizing: border-box;
+}
+/* My button */
+.customButtons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    color: blue;
+    border-radius: 5%;
+}
+/* carousel */
+.owl-item{
+    height: 500px;
+    border: 3px solid rgb(197, 72, 72);
+}
+
+.owl-dot span{
+    width: 50px!important;
+    height: 50px!important;
+    border-radius: 50%;
+    background-color: springgreen!important;
+}
+
+ .owl-dot.active span{
+    background-color: aquamarine!important;
+    border-color: rgb(1, 249, 55)!important;
+}
