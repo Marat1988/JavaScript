@@ -67,11 +67,14 @@ $(document).ready(function(){
 
     owl.on('changed.owl.carousel', function(event){ //при возникновении события (нажатие NEXT или PREV)
         //localStorage.setItem(nameKeyLocalStorage, JSON.stringify(event.property));
+        console.log(event);
         var obj = {
             name: event.property.name,
             value: event.property.value,
+            pageIndex: event.page.index,
+            pageSize: event.page.size,
             toString: function() {
-                return `name: ${this.name} value: ${this.value}`;
+                return `name: ${this.name};\nvalue: ${this.value};\npageIndex: ${this.pageIndex};\npageSize: ${this.pageSize}`;
             }
         }
         localStorage.setItem(nameKeyLocalStorage, obj.toString());
