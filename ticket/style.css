@@ -1,0 +1,51 @@
+.cinema{
+    width: 50%;
+    background-color: aquamarine;
+}
+
+.welcome{
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.place {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+.place > div {
+    margin: 5px;
+    padding: 10px;
+    width: 30px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.numberPlace {
+    background-color:beige;
+}
+
+.chooisePlace{
+    background-color:darkgoldenrod;
+}
+
+form{
+    width: 50%;
+    margin: 20px;
+}
+
+input{
+    width: 100%;
+    box-sizing:border-box;
+    margin-bottom: 10px;
+}
+form button{
+    width: 100%;
+}
+
+
+
+
