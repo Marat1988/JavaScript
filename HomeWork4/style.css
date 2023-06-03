@@ -1,7 +1,8 @@
 .cinema{
-    width: 50%;
+    width: 30%;
     background-color: aquamarine;
 }
+
 
 .welcome{
     text-align: center;
@@ -9,7 +10,7 @@
     font-weight: bold;
 }
 
-.place {
+.place, .forms {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -32,16 +33,15 @@
     background-color:darkgoldenrod;
 }
 
-form{
-    width: 50%;
-    margin: 20px;
-}
-
-input{
+.forms input{
     width: 100%;
     box-sizing:border-box;
     margin-bottom: 10px;
 }
-form button{
+.forms button{
     width: 100%;
+}
+
+.forms{
+    display: none;
 }
