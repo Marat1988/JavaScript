@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="race">
+        <div class="road">
+            <div class="track">
+                <div class="car Max"><img src="Max.png" alt="Максим"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="track">
+                <div class="car Ivan"><img src="Ivan.jpg" alt="Иван"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="track">
+                <div class="car Marat"><img src="Marat.png" alt="Марат"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="track">
+                <div class="car Daniil"><img src="Daniil.png" alt="Даниил"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="track">
+                <div class="car Nikita"><img src="Nikita.png" alt="Никита"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="track">
+                <div class="car Daria"><img src="Daria.png" alt="Дарья"></div>
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <div>
+            <label for="choosePlayer">Выберите игрока:</label>
+            <select name="userChoosePlayer" id="choosePlayer">
+                <option value="Max">Max</option>
+                <option value="Ivan">Ivan</option>
+                <option value="Marat">Marat</option>
+                <option value="Daniil">Daniil</option>
+                <option value="Nikita">Nikita</option>
+                <option value="Nikita">Daria</option>
+            </select>
+        </div>
+        <div>
+            <label for="place">Место:</label>
+            <select name="userPlace" id="place">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div>
+            <label for="bet">Введите вашу ставку:</label>
+            <input type="number" name="userBet" id="bet" min="100" value="1000">
+        </div>
+        <input type="submit" value="Запустить гонки!" id="start">
+    </form>
+
+    <input type="button" value="test" id="test">
+
+    <script src="javascript.js"></script>
+
+
+
+
+</body>
+</html>
