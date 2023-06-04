@@ -35,7 +35,7 @@ let btnStart= document.getElementById('start'); //кнопка старта
 
 function getFormData(event){
     event.preventDefault();
-    writeStatistic(`Выбранный игрок: ${userPlayser.options[userPlayser.selectedIndex].text}. Выбранное место: ${userPlaces.value}. Ваша ставка: ${userBet.value}\n\n`);
+    writeStatistic(`Выбранный игрок: ${userPlayser.options[userPlayser.selectedIndex].text}. Выбранное место: ${userPlaces.options[userPlaces.selectedIndex].text}. Ваша ставка: ${userBet.value}\n\n`);
     btnStart.disabled = true;
     let start = Date.now(); //Время старта
     let timer = setInterval(function() {
@@ -74,7 +74,27 @@ function compare(player1, player2){ //для сортировки массива
 
 function infoAboutWinnings(){
     let playerUserPlace = players.map(x=>x.fio).indexOf(userPlayser.options[userPlayser.selectedIndex].text) + 1;
-    writeStatistic(`\nВаш игрок занял ${playerUserPlace} место.`);
+    console.log(+playerUserPlace);
+    console.log(+(userPlaces.options[userPlaces.selectedIndex].text));
+    let moneyWinner = 0; //Денежный приз
+    writeStatistic(`\nВаш игрок занял ${playerUserPlace} место.\n`);
+    if (userPlaces.selectedIndex===0){
+        if (playerUserPlace===1){
+            moneyWinner+=userBet.value*0.5; //50% от ставки игрока
+        }
+        if (playerUserPlace===2){
+            moneyWinner+=userBet.value*0.25; //25% от ставки игрока
+        }
+        if (playerUserPlace===3){
+            moneyWinner+=userBet.value*0.1; //10% от ставки игрока
+        }
+    }
+    else{        
+        if ((+playerUserPlace)===(+(userPlaces.options[userPlaces.selectedIndex].text))){
+            moneyWinner+=userBet.value*5; //В пять раз от ставки
+        }
+    }
+    writeStatistic(`Денежный приз ${moneyWinner} руб.`);  
 }
 
 form.addEventListener('submit', getFormData);
