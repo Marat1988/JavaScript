@@ -1,11 +1,15 @@
 'use strict';
 
-let road = document.querySelector('.track');
-let cars= document.querySelectorAll('.car');
-
+let road = document.querySelector('.track'); //гоночный трек
+let cars= document.querySelectorAll('.car'); //Массив машин
+let statistic = document.querySelector('.statistic'); //статистика
+const {form} = document.forms;
 const distance = road.clientWidth; //Расстояние
 const widthCar = document.querySelectorAll('.car')[0].clientWidth; //Ширина машины (по сути блока DIV). Они все одинаковые
 
+let userPlayser = document.getElementById('choosePlayer'); //Выбор пользователя игрока
+let userPlaces = document.getElementById('place'); //Выбор пользователя места
+let userBet = document.getElementById('bet'); //Ставка пользователя
 
 class Player { //Класс игрок
     constructor(fio, car){
@@ -16,7 +20,7 @@ class Player { //Класс игрок
     }
 
     showInfo(){
-        return `Расстояние: ${distance} px\nВремя:${this.passTime} ms\nСкорость:${distance/this.passTime} px/ms`;
+        return `Игрок: ${this.fio}. Расстояние: ${distance} px. Время: ${this.passTime} ms. Скорость: ${distance/this.passTime} px/ms\n`;
     }
 }
 
@@ -29,8 +33,10 @@ let players = [new Player('Max', cars[0]),
 
 let btnStart= document.getElementById('start'); //кнопка старта
 
-btnStart.addEventListener('click', function(event){
+function getFormData(event){
     event.preventDefault();
+    writeStatistic(`Выбранный игрок: ${userPlayser.options[userPlayser.selectedIndex].text}. Выбранное место: ${userPlaces.value}. Ваша ставка: ${userBet.value}\n\n`);
+    btnStart.disabled = true;
     let start = Date.now(); //Время старта
     let timer = setInterval(function() {
         for (const race of players) {
@@ -46,11 +52,30 @@ btnStart.addEventListener('click', function(event){
         let notFinished = players.filter(player=>player.finished===false).length; //Количество не финишировавших
         if (notFinished===0){
             clearInterval(timer);
-            console.log(players);
+            players.sort(compare);
             players.forEach(function(entry){
-                  alert(entry.showInfo());
+                writeStatistic(entry.showInfo());
             });
+            infoAboutWinnings();
+            writeStatistic('\nДля запуска новой игры обновите страницу!');
         }
       }, 20);
+}
 
-});
+function writeStatistic(info) { //Запись статистики в DIV
+    statistic.innerText+=info;
+}
+
+function compare(player1, player2){ //для сортировки массива с целью определения победителя
+    if (player1.passTime > player2.passTime) return 1;
+    if (player1.passTime == player2.passTime) return 0;
+    if (player1.passTime < player2.passTime) return -1;
+}
+
+function infoAboutWinnings(){
+    let playerUserPlace = players.map(x=>x.fio).indexOf(userPlayser.options[userPlayser.selectedIndex].text) + 1;
+    writeStatistic(`\nВаш игрок занял ${playerUserPlace} место.`);
+}
+
+form.addEventListener('submit', getFormData);
+

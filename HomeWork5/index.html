@@ -16,7 +16,7 @@
         </div>
         <div class="road">
             <div class="track">
-                <div class="car"><img src="Ivan.jpg" alt="Ivan"></div>
+                <div class="car"><img src="Ivan.png" alt="Ivan"></div>
             </div>
         </div>
         <div class="road">
@@ -41,16 +41,16 @@
         </div>
     </div>
 
-    <form>
+    <form action="/" method="get" id="form">
         <div>
             <label for="choosePlayer">Выберите игрока:</label>
             <select name="userChoosePlayer" id="choosePlayer">
-                <option value="Max">Max</option>
-                <option value="Ivan">Ivan</option>
-                <option value="Marat">Marat</option>
-                <option value="Daniil">Daniil</option>
-                <option value="Nikita">Nikita</option>
-                <option value="Nikita">Daria</option>
+                <option value="Player1">Max</option>
+                <option value="Player2">Ivan</option>
+                <option value="Player3">Marat</option>
+                <option value="Player4">Daniil</option>
+                <option value="Player5">Nikita</option>
+                <option value="Player6">Daria</option>
             </select>
         </div>
         <div>
@@ -63,16 +63,11 @@
         </div>
         <div>
             <label for="bet">Введите вашу ставку:</label>
-            <input type="number" name="userBet" id="bet" min="100" value="1000">
+            <input type="number" name="userBet" id="bet" min="1000" required value="1000" placeholder="Введите вашу ставку">
         </div>
         <input type="submit" value="Запустить гонки!" id="start">
     </form>
-
-
+    <div class="statistic"></div>
     <script src="javascript.js"></script>
-
-
-
-
 </body>
 </html>
