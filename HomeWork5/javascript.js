@@ -11,8 +11,6 @@ let userPlayser = document.getElementById('choosePlayer'); //Выбор поль
 let userPlaces = document.getElementById('place'); //Выбор пользователя места
 let userBet = document.getElementById('bet'); //Ставка пользователя
 
-console.log(distance);
-
 class Player { //Класс игрок
     constructor(fio, car){
         this.car = car;
@@ -61,8 +59,7 @@ function getFormData(event){
             infoAboutWinnings();
             writeStatistic('\nДля запуска новой игры обновите страницу!');
             distance = road.clientWidth;
-            road.style.width = distance+'px';
-            console.log(distance);
+            document.querySelectorAll('.track').style.width = distance + 'px';
         }
       }, 20);
 }
@@ -104,4 +101,5 @@ form.addEventListener('submit', getFormData);
 
 window.addEventListener('resize',function(){ //Изменени ширины полосы при изменении масштаба экрана
     distance = road.clientWidth;
+    document.querySelectorAll('.track').style.width = distance + 'px';
 });
