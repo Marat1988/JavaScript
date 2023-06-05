@@ -4,12 +4,14 @@ let road = document.querySelector('.track'); //гоночный трек
 let cars= document.querySelectorAll('.car'); //Массив машин
 let statistic = document.querySelector('.statistic'); //статистика
 const {form} = document.forms;
-const distance = road.clientWidth; //Расстояние
+let distance = road.clientWidth; //Расстояние
 const widthCar = document.querySelectorAll('.car')[0].clientWidth; //Ширина машины (по сути блока DIV). Они все одинаковые
 
 let userPlayser = document.getElementById('choosePlayer'); //Выбор пользователя игрока
 let userPlaces = document.getElementById('place'); //Выбор пользователя места
 let userBet = document.getElementById('bet'); //Ставка пользователя
+
+console.log(distance);
 
 class Player { //Класс игрок
     constructor(fio, car){
@@ -58,6 +60,9 @@ function getFormData(event){
             });
             infoAboutWinnings();
             writeStatistic('\nДля запуска новой игры обновите страницу!');
+            distance = road.clientWidth;
+            road.style.width = distance+'px';
+            console.log(distance);
         }
       }, 20);
 }
@@ -74,8 +79,6 @@ function compare(player1, player2){ //для сортировки массива
 
 function infoAboutWinnings(){
     let playerUserPlace = players.map(x=>x.fio).indexOf(userPlayser.options[userPlayser.selectedIndex].text) + 1;
-    console.log(+playerUserPlace);
-    console.log(+(userPlaces.options[userPlaces.selectedIndex].text));
     let moneyWinner = 0; //Денежный приз
     writeStatistic(`\nВаш игрок занял ${playerUserPlace} место.\n`);
     if (userPlaces.selectedIndex===0){
@@ -94,8 +97,11 @@ function infoAboutWinnings(){
             moneyWinner+=userBet.value*5; //В пять раз от ставки
         }
     }
-    writeStatistic(`Денежный приз ${moneyWinner} руб.`);  
+    writeStatistic(`Денежный приз ${moneyWinner} руб.`);
 }
 
 form.addEventListener('submit', getFormData);
 
+window.addEventListener('resize',function(){ //Изменени ширины полосы при изменении масштаба экрана
+    distance = road.clientWidth;
+});
