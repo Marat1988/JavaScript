@@ -27,7 +27,8 @@ function preloadImage(arrImage, loader){
         let img = document.createElement('img');
         img.src = arrImage[i];
         img.alt = i;
-        img.onload = () => loader(img);
+        img.onload = ()=>loader(img);
+
 
         if (i==0){
             borderImageNow(img);
