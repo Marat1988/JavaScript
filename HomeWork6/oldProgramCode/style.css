@@ -1,0 +1,32 @@
+.viewPicture{
+    width: 30%;
+    height:50vh;
+    margin: 0 auto;
+}
+
+.viewPicture img{
+    width: 100%;
+    height: 100%;
+}
+
+.miniature{
+    width: 80%;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    overflow-y: visible;
+    overflow-x: scroll;
+    background-color: antiquewhite;
+}
+
+.miniature img{
+    width: 200px;
+    height: auto;
+    margin: 0px 5px;
+}
+
+.borderImage{
+    border: 5px solid red;
+}
+
