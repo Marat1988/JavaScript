@@ -1,0 +1,162 @@
+*{
+	padding:0;
+	margin:0;
+}
+.col-4 {
+	width: 33.33333333%;
+	display: inline-block;
+	float: left;
+}
+.col-8 {
+	width: 66.666666666%;
+	display: inline-block;
+	height: 100vh;
+	margin-left: 33.33333333%;
+}
+.col-12{
+	width:100%;
+}
+.domain-operations {
+	background: #ccc;
+	height: 100vh;
+	position: fixed;
+}
+.area {
+	width: 340px;
+	margin: 0 auto;
+}
+button.btn {
+	padding: 10px 20px;
+	margin: 10px 0;
+	font: 14px 'Segoe UI';
+	color: #404040;
+	display: block;
+}
+.desk p{
+	padding: 10px 0;
+	margin: 6px 0 -3px 0;
+}
+/*button*/
+button.btn {
+	padding: 5px 10px;
+	margin: 10px 0;
+	font: 14px 'Segoe UI';
+	color: #404040;
+	display: block;
+	background: linear-gradient(to bottom, #fefefe 0%, #ebebeb 100%);
+	border: 1px solid #b2b2b2;
+	border-radius:2px;
+}
+button.btn:hover {
+	background: linear-gradient(#f2f2f2 0%, #dedede 100%);
+}
+button.btn:active {
+	background: #d9d9d9;
+	box-shadow: inset 0px 1px 0px rgba(0,0,0,0.25);
+}
+button.btn.btn-multiplication {
+	background: linear-gradient(to bottom, #4ba91d 0%,#37910b 100%);
+	border: 1px solid #5e9450;
+	background: url(../images/mul.png) no-repeat;
+	background-size: contain;
+	border:none;
+	color: #fff;
+	padding: 10px 30px 10px 20px;
+	margin: 40px 0 50px 0;
+}
+button.btn.btn-multiplication:hover {
+	background: linear-gradient(#3b8d13 0%, #307e0a 100%);
+	background: url(../images/mul_act.png) no-repeat;
+	background-size: contain;
+}
+button.btn img {
+	padding-right: 8px;
+}
+.radio_btn {
+	margin: 60px 0 10px 0;
+}
+/*Matrix*/
+.matrix {
+	width: auto;
+	margin: 20px;
+	display:inline-block;
+}
+.matrix.matrix-c {
+	width: auto;
+}
+input.form-control[disabled] {
+	background: #f2f2f2;
+	border: 1px solid #d9d9d9;
+}
+input.form-control {
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 1px 0px rgba(0,0,0,0.05);
+	margin:4px;
+	padding:2px;
+}
+.active {
+	background: #5450DD;
+}
+.error{
+	font: 14px 'Segoe UI';
+	color: rgb(218, 9, 2);
+	display: inline-block;
+	margin-top: 20px;
+}
+
+/*Наименование матриц*/
+div.matrix{
+	position: relative;
+}
+div.matrix p{
+	position: absolute;
+	right: -30px;
+	top: 45%;
+	font: 23px 'Segoe ui';
+}
+
+/*Границы матриц*/
+.matrix {
+	border-right: 2px #404040 solid; /* Параметры рамки */
+	border-left: 2px #404040 solid; /* Параметры рамки */
+}
+em.corner-left, em.corner-left b, em.corner-right, em.corner-right b {
+	display: block;
+	height: 10px; 
+	font-size: 0; 
+	background: url(../images/corners.png) no-repeat; 
+	position: relative; 
+}
+em.corner-left { 
+	top: -2px; 
+	left: -2px; 
+}
+em.corner-left b {
+	background-position:  100% -10px;
+	left: 4px;
+}
+em.corner-right { background-position: 0 -20px; top: 2px; left: -2px; }
+em.corner-right b { background-position: 100% -30px; left: 4px; }
+.matrix table {
+	padding: 0;
+}
+
+button.disabled_btn{
+	background: #f2f2f2;
+	color: #A3A3A3;
+	opacity: 0.7;
+}
+button.disabled_btn:active{
+	background: #f2f2f2!important;
+	color: #A3A3A3;
+	box-shadow: none!important;
+}
+button.disabled_btn:hover{
+	background: #f2f2f2!important;
+	color: #A3A3A3;
+	box-shadow: none!important;
+	opacity: 0.7;
+}

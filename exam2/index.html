@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Тестовое задание</title>
+
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<!-- <script type="text/javascript" src="js/message.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script> -->
+
+	<!--[if IE 8]>
+		<link href="css/style_ie_8.css" type="text/css" rel="stylesheet" />
+	<![endif]-->
+
+</head>
+<body>
+
+<div class="container">
+		<div class="col-4 domain-operations">
+			<div class="area">
+				<button id="multiply" class="btn btn-multiplication" type="submit">Умножить матрицы</button>
+
+				<button id="clear" class="btn btn-clear" type="submit"><img src="images/clear.png" alt="" />Очистить матрицы</button>
+				<button id="change" class="btn btn-change" type="submit"><img src="images/change.png" alt="" />Поменять матрицы местами</button>
+
+
+				<div class="row">
+					<div class="radio_btn">
+						<label class="radio-inline">
+						  <input type="radio" name="matrix" id="check_matrix_a" value="option1" checked> Матрица А
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="matrix" id="check_matrix_b" value="option2"> Матрица В
+						</label>
+					</div>
+					<div class="col-4">
+						<button id="add_rows" class="btn btn-add" type="submit"><img src="images/add.png" alt="" />Добавить</button>
+						<button id="add_colums" class="btn btn-add" type="submit"><img src="images/add.png" alt="" />Добавить</button>
+					</div>
+					<div class="col-4">
+						<button id="del_rows" class="btn btn-del disabled_btn" type="submit" disabled><img src="images/del.png" alt="" />Удалить</button>
+						<button id="del_colums" class="btn btn-del disabled_btn" type="submit" disabled><img src="images/del.png" alt="" />Удалить</button>
+					</div>
+					<div class="col-4 desk">
+						<p>строку</p>
+						<p>столбец</p>
+					</div>
+				</div>
+
+				<div class="error"></div>
+			</div>
+		</div>
+		<div class="col-8">
+			<div class="work-area">
+				<div class="matrix matrix-c color_block">
+					<em class="corner-left"><b>&nbsp;</b></em>
+					<table id="matrix-c">
+						<tbody>
+							
+						</tbody>
+					</table>
+					<em class="corner-right"><b>&nbsp;</b></em>
+				</div>
+
+				<div class="matrix matrix-a">
+					<em class="corner-left"><b>&nbsp;</b></em>
+					<table id="matrix-a">
+						<tbody>
+							<!-- <tr>
+								<td><input type="number" min="1" max="10" required></td>
+								<td><input type="number" min="1" max="10" required></td>
+								<td><input type="number" min="1" max="10" required></td>
+							</tr>
+							<tr>
+								<td><input type="number" min="1" max="10" required></td>
+								<td><input type="number" min="1" max="10" required></td>
+								<td><input type="number" min="1" max="10" required></td>
+							</tr>
+							<tr>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+							</tr> -->
+						</tbody>
+					</table>
+					<p>A</p>
+					<em class="corner-right"><b>&nbsp;</b></em>
+				</div>
+
+				<div style="clear: left"></div>
+				<div class="matrix matrix-b">
+					<em class="corner-left"><b>&nbsp;</b></em>
+					<table id="matrix-b">
+						<tbody>
+							<!-- <tr>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+							</tr>
+							<tr>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+							</tr>
+							<tr>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10"  required></td>
+								<td><input type="number" min="1" max="10" required></td>
+							</tr> -->
+						</tbody>
+					</table>
+					<em class="corner-right"><b>&nbsp;</b></em>
+					<p>B</p>
+				</div>
+
+			</div>
+		</div>
+</div>
+
+<script src="js.js"></script>
+
+</body>
+</html>

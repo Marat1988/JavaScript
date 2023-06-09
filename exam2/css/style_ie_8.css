@@ -1,0 +1,22 @@
+.domain-operations{
+	height:100%;
+}
+button.btn{
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', 
+            endColorstr='#ebebeb',GradientType=0);
+}
+button.btn:hover {
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', 
+            endColorstr='#dedede',GradientType=0);
+}
+button.btn.btn-multiplication {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ba91d', 
+            endColorstr='#37910b',GradientType=0);
+}
+button.btn.btn-multiplication:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3b8d13', 
+            endColorstr='#307e0a',GradientType=0)
+}
+input.form-control{
+	border:1px solid #ccc;
+}
