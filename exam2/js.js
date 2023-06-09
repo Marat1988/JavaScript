@@ -101,6 +101,7 @@ function refreshForAddDeleteColumn(matrix){ //Обновление возмож�
         addColum.classList.remove('disabled_btn');
         addColum.disabled = false;
     }
+    errorMessage.innerText = '';
 }
 
 function refreshForListenerOnInput(){ //Обновления обработчика события input
