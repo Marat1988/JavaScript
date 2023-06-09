@@ -236,10 +236,16 @@ swapMatrix.addEventListener('click', function(){ /*Меняем матрицы �
     let tempTbodyB = tbodyB;
     matrixA.appendChild(tempTbodyB);
     matrixB.appendChild(tempTbodyA);
-    refreshForAddDeleteRow(matrixA);
-    refreshForAddDeleteColumn(matrixA);
-    refreshForAddDeleteRow(matrixB);
-    refreshForAddDeleteColumn(matrixB);
+    
+    if (checkMatrixA.checked){
+        refreshForAddDeleteRow(matrixA);
+        refreshForAddDeleteColumn(matrixA);
+    }
+    else{
+        refreshForAddDeleteRow(matrixB);
+        refreshForAddDeleteColumn(matrixB);
+    }
+    refreshForListenerOnInput();
 });
 
 /*Очистка матрицы*/
